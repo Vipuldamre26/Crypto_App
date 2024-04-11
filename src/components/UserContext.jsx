@@ -18,16 +18,21 @@ const UserContext = ({ children }) => {
 
     
 
-    const FetchApi = async () => {
+    const FetchApi1 = async () => {
         let data1 = await axios.get(api1);
-        let data2 = await axios.get(api2);
         setData1([...data1.data]);
+    }
+    
+
+    const FetchApi2 = async () => {
+        let data2 = await axios.get(api2);
         setData2([...data2.data]);
     }
 
 
     useEffect(() => {
-        FetchApi();
+        FetchApi1();
+        FetchApi2();
     },[currency])
 
 

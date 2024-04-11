@@ -1,0 +1,47 @@
+.coinpage{
+    width: 100%;
+}
+
+.coinpage .left-content{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4.2vmin;
+    border-right: 1px solid rgba(255, 255, 255, 0.548);
+}
+
+.coinpage .left-content img{
+    width: 12rem;
+}
+
+
+.coinpage .left-content strong{
+    display: inline-block;
+    font-size: 2.7rem;
+    margin: 0.6rem auto;
+}
+
+.coinpage .left-content p{
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0.6rem auto;
+    line-height: 1.8rem;
+}
+
+.coinpage .left-content span{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin: 0.6rem auto;
+    width: 100%;
+}
+
+.coinpage .left-content span strong{
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 0.6rem auto;
+}

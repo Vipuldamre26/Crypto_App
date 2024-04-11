@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import './coindata.css';
+import './cointable.css';
 import { useContext } from 'react';
 import { DataContext } from '../UserContext';
-import { Pagination } from '@mui/lab';
+import Pagination from '@mui/material/Pagination'
 import { useNavigate } from 'react-router-dom';
 
-const CoinData = ({ search }) => {
+const CoinTable = ({ search }) => {
 
     const [loading, setLoading] = useState(false);
     const [page, setPage] = useState(1);
@@ -13,7 +13,7 @@ const CoinData = ({ search }) => {
     const navigate = useNavigate();
 
     const { data2, currency } = useContext(DataContext);
-    // console.log(data);
+    // console.log(data2);
     // console.log(search);
 
     // ************************************************************************
@@ -32,6 +32,7 @@ const CoinData = ({ search }) => {
 
 
     useEffect(() => {
+        console.log(data2);
         setData(data2);
     }, [])
 
@@ -70,7 +71,7 @@ const CoinData = ({ search }) => {
                 <tbody>
 
                     {
-                        !data ? <p>Loading...</p> : data?.slice((page - 1) * 10, (page - 1) * 10 + 10)
+                        data?.slice((page - 1) * 10, (page - 1) * 10 + 10)
                             .map((item) => {
                                 return (
                                     <tr key={item.id} onClick={() => navigate(`./coin/${item.id}`)}>
@@ -113,4 +114,4 @@ const CoinData = ({ search }) => {
     )
 }
 
-export default CoinData;
+export default CoinTable;

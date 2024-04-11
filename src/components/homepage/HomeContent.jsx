@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import CoinData from './CoinData';
 import './homecontent.css';
 import { useContext } from 'react';
 import { DataContext } from '../UserContext';
+import CoinTable from './CoinTable';
 
 const HomeContent = () => {
 
@@ -29,7 +29,7 @@ const HomeContent = () => {
             <div className='home-main'>
                 <strong>Cryptocurrency Prices by Market Cap</strong>
                 <input onChange={getSearch} ref={ref}  type='text' placeholder='Search For a Crypto Currency'></input>
-                <CoinData search={search} />
+                <CoinTable search={search} />
             </div>
         </div>
     )
