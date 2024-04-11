@@ -1,16 +1,27 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import CoinData from './CoinData';
 import './homecontent.css';
+import { useContext } from 'react';
+import { DataContext } from '../UserContext';
 
 const HomeContent = () => {
 
     const ref = useRef('');
     const [ search, setSearch ] = useState('');
 
+    const { data2, setData2 } = useContext(DataContext);
 
+
+    // ************************************************************************
+
+    
     const getSearch = () => {
         setSearch(ref.current.value);
     }
+    
+    // console.log(data);
+
+    // ************************************************************************
 
 
     return (

@@ -10,6 +10,10 @@ table{
     width: 100%;
 }
 
+.table{
+    width: 100%;
+}
+
 table tr{
     width: 100%;
     cursor: pointer;
@@ -57,17 +61,17 @@ table tr .td .td1{
    text-align: left;
 }
 
+table tr .td .td1 strong{
+   font-size: 1.7rem;
+}
+
+table tr .td .td1 span{
+   color: rgba(255, 255, 255, 0.598);
+}
+
 table tr td img{
     width: 3.4rem;
     height: 3.4rem;
     margin: auto 0;
     margin-right: 3.2vmin;
-}
-
-
-@media (max-width: 600px) {
-    table {
-        width: 600px;
-        overflow-y: scroll;
-    }
 }
