@@ -3,7 +3,8 @@ import './coinpage.css';
 import axios from 'axios'
 import { useParams } from 'react-router-dom';
 import { useContext } from 'react';
-import { DataContext } from './UserContext';
+import { DataContext } from '../UserContext';
+import CoinData from './CoinData';
 
 const CoinPage = () => {
 
@@ -38,7 +39,7 @@ const CoinPage = () => {
                 <span>Current Price: <strong>{currency === 'INR' ? '₹ ' : '$ '} {coin?.market_data.current_price[(currency.toLowerCase())]}</strong></span>
                 <span>Market Cap: <strong> {currency === 'INR' ? '₹ ' : '$ '} {coin?.market_data.market_cap[(currency.toLowerCase())].toString().slice(0, -6)} M</strong></span>
             </div>
-            <div className='right-content'></div>
+            <CoinData />
         </div>
     )
 }
