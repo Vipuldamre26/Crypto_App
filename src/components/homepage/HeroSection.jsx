@@ -53,6 +53,7 @@ const HeroSection = () => {
 
 
     const { data1, currency } = useContext(DataContext);
+    console.log(data1);
 
 
     const getCoinInfo = (id) => {
@@ -78,7 +79,7 @@ const HeroSection = () => {
                                 return (
                                     <div className='coin-item' onClick={() => getCoinInfo(item.id)} key={item.id}>
                                         <img src={item.image}></img>
-                                        <p style={{ color: 'white' }}>{(item.symbol).toUpperCase()} <span style={{ display: 'inline-block', fontWeight: '600', color: item.ath_change_percentage > 0 ? 'light-green' : 'red' }}>{(item.ath_change_percentage).toFixed(2)}</span></p>
+                                        <p style={{ color: 'white' }}>{(item.symbol).toUpperCase()} <span style={{ display: 'inline-block', fontWeight: '600', color: item.price_change_percentage_24h > 0 ? 'lightgreen' : 'red' }}>{item.price_change_percentage_24h > 0 ? '+' : ''}{(item.price_change_percentage_24h).toFixed(2)} %</span></p>
                                         <strong>{currency === 'INR' ? '₹ ' : '$ '}{item.current_price}</strong>
                                     </div>
                                 )

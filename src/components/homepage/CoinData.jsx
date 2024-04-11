@@ -77,7 +77,7 @@ const CoinData = ({ search }) => {
                                             </div>
                                         </td>
                                         <td>{currency === 'INR' ? '₹ ' : '$ '}{item.current_price}</td>
-                                        <td style={{ color: item.price_change_percentage_24h > 0 ? 'lightgreen' : 'red' }}>{item.price_change_percentage_24h.toFixed(2)} %</td>
+                                        <td style={{ color: item.price_change_percentage_24h > 0 ? 'lightgreen' : 'red' }}>{item.price_change_percentage_24h > 0 ? '+' : ''}{item.price_change_percentage_24h.toFixed(2)} %</td>
                                         <td>{currency === 'INR' ? '₹ ' : '$ '}{(item.market_cap).toString().slice(0, -6)} M</td>
                                     </tr>
                                 )

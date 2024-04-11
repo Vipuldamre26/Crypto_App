@@ -12,7 +12,7 @@ const CoinPage = () => {
 
     const FetchApi = async () => {
         let data = await axios.get(coinApi);
-        console.log(data);
+        console.log(data.data);
     }
 
     
