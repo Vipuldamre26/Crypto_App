@@ -1,0 +1,73 @@
+ul .MuiPaginationItem-root{
+    color: white;
+}
+ul .MuiPaginationItem-root:hover{
+    color: white;
+    background-color: rgba(240, 255, 255, 0.169);
+}
+
+table{
+    width: 100%;
+}
+
+table tr{
+    width: 100%;
+    cursor: pointer;
+}
+
+table tr:hover{
+    background-color: rgba(0, 0, 0, 0.342);
+}
+
+table tr th {
+   padding: 0.9rem 1rem;
+   text-align: right;
+}
+
+table tr td, th {
+   text-align: right;
+}
+
+table tr td {
+   text-align: right;
+   border-bottom: 1px solid rgba(255, 255, 255, 0.347);
+   padding: 1rem 1rem;
+}
+
+table tr .th {
+   text-align: left;
+}
+
+table .heading {
+   background-color: goldenrod; 
+}
+
+table .heading:hover {
+   background-color: goldenrod; 
+}
+
+
+table tr .td {
+   display: flex;
+}
+
+table tr .td .td1{
+   display: flex;
+   flex-direction: column;
+   text-align: left;
+}
+
+table tr td img{
+    width: 3.4rem;
+    height: 3.4rem;
+    margin: auto 0;
+    margin-right: 3.2vmin;
+}
+
+
+@media (max-width: 600px) {
+    table {
+        width: 600px;
+        overflow-y: scroll;
+    }
+}
