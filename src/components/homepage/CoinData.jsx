@@ -20,7 +20,7 @@ const CoinData = ({ search }) => {
 
 
     useEffect(() => {
-        filterData();
+        // filterData();
         if (search === '') {
             setData(data2);
         }
@@ -29,6 +29,11 @@ const CoinData = ({ search }) => {
         }
         // console.log(search);
     }, [search])
+
+
+    useEffect(() => {
+        setData(data2);
+    }, [])
 
     // console.log(data);
     // ************************************************************************
