@@ -10,16 +10,16 @@ const CoinPage = () => {
 
     const [ coin, setCoin ] = useState();
     const { currency } = useContext(DataContext);
-    console.log(currency);
+    // console.log(currency);
 
     const { id } = useParams();
-    console.log(id);
+    // console.log(id);
 
     const coinApi = `https://api.coingecko.com/api/v3/coins/${id}`
 
     const FetchApi = async () => {
         let data = await axios.get(coinApi);
-        console.log(data.data);
+        // console.log(data.data);
         setCoin(data.data)
     }
 

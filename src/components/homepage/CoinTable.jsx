@@ -20,6 +20,7 @@ const CoinTable = ({ search }) => {
 
 
     useEffect(() => {
+
         // filterData();
         if (search === '') {
             setData(data2);
@@ -31,12 +32,16 @@ const CoinTable = ({ search }) => {
     }, [search])
 
 
-    useEffect(() => {
-        console.log(data2);
-        setData(data2);
-    }, [])
+    // useEffect(() => {
 
-    // console.log(data);
+    // },[data])
+
+    useEffect(() => {
+        // console.log(data2);
+        setData(data2);
+        console.log(data);
+    }, [data2])
+
     // ************************************************************************
 
 
@@ -71,7 +76,7 @@ const CoinTable = ({ search }) => {
                 <tbody>
 
                     {
-                        data?.slice((page - 1) * 10, (page - 1) * 10 + 10)
+                        data.length > 0 && data.slice((page - 1) * 10, (page - 1) * 10 + 10)
                             .map((item) => {
                                 return (
                                     <tr key={item.id} onClick={() => navigate(`./coin/${item.id}`)}>
@@ -101,7 +106,7 @@ const CoinTable = ({ search }) => {
                     color: 'white'
 
                 }}
-                count={(data2?.length / 10).toFixed(0)}
+                count={(data?.length / 10).toFixed(0)}
                 color="primary"
 
                 onChange={(_, value) => {

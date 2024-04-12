@@ -1,5 +1,7 @@
 .coinpage{
     width: 100%;
+    display: flex;
+    box-sizing: border-box;
 }
 
 .coinpage .left-content{
@@ -10,6 +12,7 @@
     flex-direction: column;
     padding: 4.2vmin;
     border-right: 1px solid rgba(255, 255, 255, 0.548);
+    box-sizing: border-box;
 }
 
 .coinpage .left-content img{
@@ -45,4 +48,22 @@
     font-size: 1.5rem;
     font-weight: 300;
     margin: 0.6rem auto;
+}
+
+
+
+@media (max-width: 730px) {
+    .coinpage{
+        flex-direction: column;
+    }
+
+    .coinpage .left-content{
+        width: 100%;
+        margin: auto;
+    }
+
+    .coinpage .right-content{
+        width: 100%;
+        margin: auto;
+    }
 }
