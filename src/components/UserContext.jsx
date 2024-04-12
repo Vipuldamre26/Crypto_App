@@ -5,7 +5,7 @@ export const DataContext = createContext();
 
 const UserContext = ({ children }) => {
 
-    
+
 
     const [ data1, setData1 ] = useState([]);
     const [ data2, setData2 ] = useState([]);
